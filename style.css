@@ -1,0 +1,289 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #d4d9cf;
+}
+
+header, .logo, #accueil, #partenaires, .refCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header, #accueil, #personnality, #partenaires {
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  height: 100px;
+  position: absolute;
+}
+
+.logo img {
+  margin-top: 50px;
+  width: 70px;
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+}
+
+#accueil {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 217, 207, 0.25)), to(#6a7c5a)), url(https://images.unsplash.com/photo-1473951574080-01fe45ec8643);
+  background-image: linear-gradient(to bottom, rgba(212, 217, 207, 0.25), #6a7c5a), url(https://images.unsplash.com/photo-1473951574080-01fe45ec8643);
+  background-position: bottom;
+}
+
+#accueil .titre {
+  color: #f2f2f2;
+}
+
+.titre {
+  font-size: clamp(25px, 4vw, 40px);
+  font-weight: 800;
+  text-align: center;
+  width: 80%;
+  color: #59684c;
+}
+
+.sousTitre {
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 400;
+  text-align: center;
+  margin-top: 15px;
+  width: 80%;
+}
+
+#partenaires {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f2f2f2;
+  padding-top: 50px;
+}
+
+#partenaires .refCards {
+  width: calc(100% - 20%);
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0px;
+  width: 90%;
+}
+
+#partenaires .refCard {
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  height: 500px;
+  width: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#partenaires .refCard .textCard {
+  opacity: 0;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 5px;
+}
+
+#partenaires .refCard:hover {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+#partenaires .refCard:hover .textCard {
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+  background-color: #f2f2f2;
+}
+
+.ville1 {
+  background-image: url(images/migennes.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.ville2 {
+  background-image: url(images/LaFerteMace.jpg);
+  background-size: cover;
+  background-position-x: 456px;
+}
+
+.ville3 {
+  background-image: url(/images/messei.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.ville4 {
+  background-image: url(/images/Luneville.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.ville5 {
+  background-image: url(/images/verrieres.jpg);
+  background-size: cover;
+  background-position-x: 330px;
+}
+
+.etude {
+  font-weight: 500;
+}
+
+.nomVille {
+  font-weight: 900;
+  padding-top: 10px;
+  color: #6A7C5A;
+}
+
+.competence {
+  padding-top: 10px;
+}
+
+#personnality {
+  margin: auto;
+  color: #f2f2f2;
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(160, 160, 160, 0.52)), to(rgba(0, 0, 0, 0.73))), url(/images/Bureau.jpg);
+  background-image: linear-gradient(to left, rgba(160, 160, 160, 0.52), rgba(0, 0, 0, 0.73)), url(/images/Bureau.jpg);
+  background-size: cover;
+}
+
+#personnality .card {
+  width: 300px;
+  margin: 0 calc(100% - 90%);
+  padding: 100px 0;
+}
+
+#personnality .photoID {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+#personnality .photoID img {
+  width: 100px;
+  height: 100px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+#personnality .photoID:hover {
+  width: 150px;
+  height: 150px;
+}
+
+#personnality .photoID:hover img {
+  width: 300px;
+  height: 300px;
+  -webkit-transform: translate(-70px, -20px);
+          transform: translate(-70px, -20px);
+}
+
+#personnality .name {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+#personnality .description {
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+
+#personnality .barre {
+  width: 200px;
+  height: 1px;
+  background-color: #f2f2f2;
+  margin-top: 20px;
+}
+
+#personnality .rs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  padding-bottom: 0;
+}
+
+#personnality .rs::after {
+  content: "Profile LinkedIn";
+  margin-left: 15px;
+  opacity: 0;
+}
+
+#personnality .rs img {
+  -webkit-filter: brightness(7);
+          filter: brightness(7);
+  width: 30px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#personnality .rs:hover img {
+  width: 40px;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+#personnality .rs:hover::after {
+  -webkit-transition-delay: .15s;
+          transition-delay: .15s;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  #partenaires {
+    height: 100%;
+  }
+  #partenaires .refCards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #partenaires .refCard {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+  #partenaires .refCard .textCard {
+    opacity: 1;
+    background-color: #f2f2f2;
+  }
+}
+/*# sourceMappingURL=style.css.map */

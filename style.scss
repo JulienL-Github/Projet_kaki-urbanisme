@@ -1,0 +1,249 @@
+$primaryColor: #6A7C5A;
+$secondaryColor: #59684c;
+$tertiaryColor : rgb(212, 217, 207);
+
+*, ::before, ::after {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a:visited {
+    color: $tertiaryColor;
+}
+
+header, .logo, #accueil, #partenaires, .refCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header, #accueil, #personnality, #partenaires {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    height: 100px;
+    position: absolute;
+}
+
+.logo {
+    img {
+        margin-top: 50px;
+        width: 70px;
+        filter: brightness(100);
+    }
+}
+
+#accueil {
+    flex-direction: column;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    background-image: linear-gradient(to bottom, rgba($tertiaryColor, 0.25), rgba($primaryColor, 100)), url(https://images.unsplash.com/photo-1473951574080-01fe45ec8643);
+    background-position: bottom;
+    .titre {
+        color:#f2f2f2
+    }
+    }
+
+.titre {
+    font-size: clamp(25px, 4vw,40px);
+    font-weight: 800;
+    text-align: center;
+    width: (100% - 20%);
+    color: $secondaryColor;
+}
+.sousTitre {
+    font-size: clamp(14px, 2vw,20px);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 15px;
+    width: (100% - 20%);
+}
+
+#partenaires {
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding-top: 50px;
+
+    .refCards {
+        width: calc(100% - 20%);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        margin: 50px 0px;
+        width: 90%;
+    }
+
+    .refCard {
+        transition: all 0.25s ease-out;
+        height: 500px;
+        width: 10px;
+        flex-grow: 1;
+
+        .textCard {
+            opacity: 0;
+            padding: 25px;
+            margin: 25px;
+            border-radius: 5px;
+        }
+        &:hover {
+            flex-grow: 2;
+            .textCard {
+                opacity: 1;
+                transition: .2s;
+                transition-delay: .2s;
+                background-color: #f2f2f2;
+            }
+        }
+    }
+}
+
+.ville1 {
+    background-image: url(images/migennes.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.ville2 {
+    background-image: url(images/LaFerteMace.jpg);
+    background-size: cover;
+    background-position-x: 456px;
+}
+
+.ville3 {
+    background-image: url(/images/messei.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.ville4 {
+    background-image: url(/images/Luneville.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.ville5 {
+    background-image: url(/images/verrieres.jpg);
+    background-size: cover;
+    background-position-x: 330px;
+}
+
+.etude {
+    font-weight: 500;
+}
+
+.nomVille {
+    font-weight: 900;
+    padding-top: 10px;
+    color: $primaryColor;
+}
+
+.competence {
+    padding-top: 10px;
+}
+
+#personnality {
+    margin: auto;
+    color: #f2f2f2;
+    background-image: linear-gradient(to left, rgba(160, 160, 160, 0.52), rgba(0, 0, 0, 0.73)), url(/images/Bureau.jpg);
+    background-size: cover;
+    .card{
+        width: 300px;
+        margin: 0 calc(100% - 90%);
+        padding: 100px 0;
+    } 
+    .photoID {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all .25s ease-in-out;
+        img {
+            width: 100px;
+            height: 100px;
+            transition: all .25s ease-in-out;
+        }
+        &:hover {
+            width: 150px;
+            height: 150px;
+            img {
+                width: 300px;
+                height: 300px;
+                transform: translate(-70px, -20px);
+            }
+        }
+    }
+    .name {
+        font-weight: 700;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .description {
+        font-size: 0.8em;
+        margin-top: 20px;
+    }
+
+    .barre {
+        width: 200px;
+        height: 1px;
+        background-color: #f2f2f2;
+        margin-top: 20px;
+    }
+    .rs {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        padding-bottom: 0;
+
+        &::after{
+            content: "Profile LinkedIn";
+            margin-left: 15px;
+            opacity: 0;
+        }
+
+        img {
+            filter : brightness(7);
+            width: 30px;
+            transition: all .2s ease-in-out;
+        }
+        
+        &:hover {
+            img {
+                width: 40px;
+                filter : brightness(1);
+            }
+            &::after{
+                transition-delay: .15s;
+                transition: all .25s ease-in-out;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #partenaires {
+        height: 100%;
+
+        .refCards {
+            flex-wrap: wrap;
+        }
+
+        .refCard {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            .textCard {
+                opacity: 1;
+                background-color: #f2f2f2;
+            }
+        }
+
+    }
+}
